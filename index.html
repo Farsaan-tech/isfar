@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio</title>
+  <script>
+    (function () {
+      var isMobile = window.matchMedia("(max-width: 767px)").matches;
+      var target = isMobile ? "mobile.html" : "desktop.html";
+
+      // Avoid redirect loops if the user opens this file directly.
+      window.location.replace(target);
+    })();
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=desktop.html">
+  </noscript>
+</head>
+<body>
+  <p>Loading portfolio...</p>
+</body>
+</html>
