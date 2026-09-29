@@ -1349,6 +1349,180 @@ footer{color:#71808d}
 .introProgress span{background:linear-gradient(90deg,#ff7a18,#ffb52e,#0878d1)}
 </style>
 
+
+<style id="dark-aesthetic-overhaul">
+:root{
+  --bg:#08090c;
+  --paper:#101218;
+  --ink:#f5f2ed;
+  --soft:#a8a6a3;
+  --line:#292c34;
+  --terracotta:#ff5a36;
+  --olive:#ff9b62;
+  --cream:#151821;
+  --shadow:0 30px 90px rgba(0,0,0,.55);
+}
+html{background:#08090c}
+body{
+  color:var(--ink)!important;
+  background:
+    radial-gradient(700px 500px at 8% 8%,rgba(255,70,40,.12),transparent 68%),
+    radial-gradient(650px 520px at 92% 22%,rgba(120,45,255,.10),transparent 68%),
+    radial-gradient(700px 520px at 45% 75%,rgba(0,180,255,.055),transparent 70%),
+    #08090c!important;
+}
+body:after{
+  background:
+    radial-gradient(360px 300px at 12% 36%,rgba(255,70,40,.09),transparent 70%),
+    radial-gradient(420px 340px at 88% 70%,rgba(105,45,255,.08),transparent 70%);
+  filter:blur(25px);
+  animation:ambientDrift 12s ease-in-out infinite alternate;
+}
+body:before{opacity:.22!important;background-image:linear-gradient(90deg,transparent 49.7%,rgba(255,255,255,.035) 50%,transparent 50.3%),linear-gradient(transparent 49.7%,rgba(255,255,255,.035) 50%,transparent 50.3%)!important}
+@keyframes ambientDrift{from{transform:translate3d(-1%,0,0) scale(1)}to{transform:translate3d(1%,1%,0) scale(1.06)}}
+
+nav{
+  background:rgba(10,11,15,.72)!important;
+  border:1px solid rgba(255,255,255,.10)!important;
+  box-shadow:0 12px 45px rgba(0,0,0,.32),inset 0 1px rgba(255,255,255,.05)!important;
+  backdrop-filter:blur(22px) saturate(130%);
+  -webkit-backdrop-filter:blur(22px) saturate(130%);
+  transition:all .35s ease!important;
+}
+nav:hover{border-color:rgba(255,90,54,.28)!important;box-shadow:0 15px 55px rgba(0,0,0,.42),0 0 30px rgba(255,90,54,.06)!important}
+.logo span,.heroCopy h1 em,.workCard h3 i,.eyebrow,.workNum,.timeDate,.sumNo,.toolExtras b{color:#ff704b!important}
+.navlinks a{color:#a9a8ac!important;position:relative;transition:.3s ease}
+.navlinks a:after{content:"";position:absolute;left:9px;right:9px;bottom:4px;height:1px;background:#ff5a36;transform:scaleX(0);transform-origin:center;transition:.3s ease}
+.navlinks a:hover{color:#fff!important;transform:translateY(-2px)}
+.navlinks a:hover:after{transform:scaleX(1)}
+.navBtn,.btn.primary{background:linear-gradient(135deg,#ff5a36,#ff8a5f)!important;color:#0b0c10!important;border:0!important;box-shadow:0 10px 30px rgba(255,90,54,.20)!important}
+.navBtn:hover,.btn.primary:hover{box-shadow:0 14px 38px rgba(255,90,54,.35)!important;transform:translateY(-3px) scale(1.02)!important}
+.btn{border-color:#3b3e47!important;color:#f4f2ee!important;background:rgba(255,255,255,.025);transition:all .35s cubic-bezier(.2,.8,.2,1)!important}
+.btn:hover{border-color:#ff5a36!important;background:rgba(255,90,54,.08)!important;box-shadow:0 15px 35px rgba(0,0,0,.35)!important;transform:translateY(-4px)!important}
+
+.hero,.section{position:relative}
+.hero:before,.section:before{background:radial-gradient(circle,rgba(255,75,45,.10),rgba(255,75,45,0) 70%)!important;animation:pulseGlow 6s ease-in-out infinite alternate}
+@keyframes pulseGlow{from{opacity:.35;transform:scale(.9)}to{opacity:.85;transform:scale(1.08)}}
+.heroCopy h1{animation:heroIn .9s cubic-bezier(.16,1,.3,1) both}
+.heroSub{animation:heroIn .9s .10s cubic-bezier(.16,1,.3,1) both}
+.heroText{animation:heroIn .9s .18s cubic-bezier(.16,1,.3,1) both}
+.heroActions{animation:heroIn .9s .26s cubic-bezier(.16,1,.3,1) both}
+.heroNote{animation:heroIn .9s .34s cubic-bezier(.16,1,.3,1) both}
+@keyframes heroIn{from{opacity:0;transform:translateY(28px);filter:blur(5px)}to{opacity:1;transform:none;filter:none}}
+
+.photoFrame{
+  background:linear-gradient(145deg,#171920,#0d0e12)!important;
+  border:1px solid rgba(255,255,255,.09);
+  box-shadow:0 35px 90px rgba(0,0,0,.55),0 0 0 1px rgba(255,90,54,.035)!important;
+  transition:transform .7s cubic-bezier(.16,1,.3,1),box-shadow .7s ease!important;
+}
+.photoFrame:hover{transform:rotate(0) translateY(-10px) scale(1.015)!important;box-shadow:0 45px 110px rgba(0,0,0,.68),0 0 45px rgba(255,90,54,.08)!important}
+.photoFrame:before{border-color:rgba(255,255,255,.10)!important}
+.photoFrame img{filter:saturate(.72) contrast(1.06)!important}
+.drawing{border-color:rgba(255,90,54,.42)!important;animation:spinSlow 18s linear infinite}
+@keyframes spinSlow{to{transform:rotate(360deg)}}
+.measure{color:#ff8b69!important}
+
+.intro{color:#f5f2ed!important}
+.workCard,.skillGroup,.toolItem{
+  background:linear-gradient(145deg,rgba(22,24,31,.96),rgba(13,14,19,.96))!important;
+  border:1px solid rgba(255,255,255,.085)!important;
+  box-shadow:0 18px 55px rgba(0,0,0,.34)!important;
+  overflow:hidden;
+  isolation:isolate;
+}
+.workCard:before,.skillGroup:before,.toolItem:before{
+  content:"";position:absolute;inset:-1px;z-index:-1;opacity:0;
+  background:radial-gradient(350px circle at var(--mx,50%) var(--my,50%),rgba(255,90,54,.14),transparent 42%);
+  transition:opacity .45s ease;
+}
+.workCard:hover:before,.skillGroup:hover:before,.toolItem:hover:before{opacity:1}
+.workCard:hover,.skillGroup:hover,.toolItem:hover{
+  transform:translateY(-9px)!important;
+  border-color:rgba(255,90,54,.26)!important;
+  box-shadow:0 28px 75px rgba(0,0,0,.52),0 0 35px rgba(255,90,54,.045)!important;
+}
+.workCard:nth-child(2),.skillGroup:nth-child(2){background:linear-gradient(145deg,#171b21,#11151b)!important}
+.workCard:nth-child(3),.skillGroup:nth-child(3){background:linear-gradient(145deg,#19191e,#111217)!important}
+.workCard:nth-child(4),.skillGroup:nth-child(4){background:linear-gradient(145deg,#21171a,#11151a)!important}
+.workCard:after{border-color:rgba(255,90,54,.20)!important;transition:transform .9s cubic-bezier(.16,1,.3,1),border-color .5s ease!important}
+.workCard:hover:after{border-color:rgba(255,90,54,.42)!important}
+.workCard p,.answer,.timeItem p,.skillGroup p,.toolItem small,.projectBlock p,.projectList,.projectResult span,.heroText,.intro{color:#aaa8a5!important}
+.workType,.sectionNo,.toolExtras span,.projectHint{color:#88868c!important}
+
+.aboutQuote{color:#f2efea}
+.aboutFacts,.accordion,.timeline:before,.projectHint,.toolsSection,.toolExtras,.fact,.timeItem,.projectResult{border-color:#292c34!important}
+.fact{transition:padding-left .3s ease,background .3s ease}
+.fact:hover{padding-left:10px;background:rgba(255,90,54,.035)}
+.sum h3,.timeItem h3,.skillGroup h3,.toolsTitle h3{color:#f3f0eb}
+.accordion summary{transition:background .3s ease,padding-left .3s ease}
+.accordion summary:hover{background:rgba(255,255,255,.018);padding-left:10px}
+.plus{color:#ff704b!important}
+.timeline:before{background:#292c34!important}
+.timeItem:before{background:#08090c!important;border-color:#ff5a36!important;box-shadow:0 0 0 5px rgba(255,90,54,.07),0 0 18px rgba(255,90,54,.28)}
+
+.toolIcon{border-color:#ff704b!important;color:#ff704b!important;box-shadow:inset 0 0 18px rgba(255,90,54,.035)}
+.toolItem:hover .toolIcon{background:rgba(255,90,54,.09)!important;box-shadow:0 0 25px rgba(255,90,54,.14)}
+.toolExtras b{color:#ff704b!important}
+
+.contact{
+  background:radial-gradient(550px 320px at 85% 10%,rgba(255,80,45,.17),transparent 68%),linear-gradient(135deg,#101116,#08090c)!important;
+  border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 -25px 90px rgba(0,0,0,.42)!important;
+}
+.contact:after{color:rgba(255,255,255,.025)!important;z-index:0}
+.contact > *{position:relative;z-index:2}
+.contact .eyebrow{color:#ff9b62!important}
+.contact h2{color:#fff!important;text-shadow:0 2px 20px rgba(0,0,0,.35)}
+.contact p{color:#d2d0d2!important;font-size:13px;line-height:1.7}
+.contact .btn{border-color:#62656e!important;color:#fff!important}
+.contact .btn:hover{border-color:#ff5a36!important;color:#fff!important;background:rgba(255,90,54,.10)!important}
+.contact .btn.primary{background:#f5f1ea!important;color:#101116!important;border-color:#f5f1ea!important}
+.contact .btn.primary:hover{background:#fff!important;color:#101116!important;box-shadow:0 14px 38px rgba(255,255,255,.12)!important}
+footer{color:#77757c!important}
+
+.projectModal{background:rgba(2,3,5,.80)!important;backdrop-filter:blur(16px)!important}
+.projectPanel{
+  background:linear-gradient(145deg,#171920,#0e0f13)!important;
+  border-color:rgba(255,255,255,.10)!important;
+  box-shadow:0 35px 110px rgba(0,0,0,.70)!important;
+  animation:modalIn .45s cubic-bezier(.16,1,.3,1) both;
+}
+@keyframes modalIn{from{opacity:0;transform:translateY(24px) scale(.97)}to{opacity:1;transform:none}}
+.projectClose{border-color:#383a43!important;color:#f4f0eb!important;transition:.3s ease}
+.projectClose:hover{border-color:#ff5a36!important;color:#ff704b!important;transform:rotate(90deg)}
+.projectMeta span{border-color:#363841!important;color:#aaa8a5!important;transition:.3s ease}
+.projectMeta span:hover{border-color:#ff5a36!important;color:#fff!important;background:rgba(255,90,54,.06)}
+
+.reveal{opacity:0;transform:translateY(28px) scale(.985);filter:blur(3px);transition:opacity .8s ease,transform .8s cubic-bezier(.16,1,.3,1),filter .8s ease!important}
+.reveal.show{opacity:1;transform:none;filter:none}
+
+/* subtle interactive cursor light on cards */
+@media (pointer:fine){
+  .workCard,.skillGroup,.toolItem{cursor:default}
+}
+@media(max-width:720px){
+  .workCard:hover,.skillGroup:hover,.toolItem:hover{transform:translateY(-5px)!important}
+  .navlinks a:after{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  body:after,.drawing,.heroCopy h1,.heroSub,.heroText,.heroActions,.heroNote{animation:none!important}
+}
+</style>
+<script>
+/* Aesthetic pointer lighting only — no content is changed. */
+(function(){
+  const cards=document.querySelectorAll('.workCard,.skillGroup,.toolItem');
+  cards.forEach(card=>{
+    card.addEventListener('pointermove',e=>{
+      const r=card.getBoundingClientRect();
+      card.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');
+      card.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%');
+    });
+  });
+})();
+</script>
+
 </head>
 <body>
 <div class="siteIntro" id="siteIntro" aria-label="Preparing portfolio" style="display:none!important">
